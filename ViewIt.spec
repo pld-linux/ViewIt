@@ -10,7 +10,7 @@ Source0:	http://mac.wms-network.de/gnustep/viewit/%{name}-%{version}.tar.gz
 URL:		http://mac.wms-network.de/gnustep/viewit/viewit.html
 BuildRequires:	gnustep-gui-devel >= 0.8.7
 Requires:	gnustep-gui >= 0.8.7
-Requires:	ghotscript
+Requires:	ghostscript
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %define		libcombo	gnu-gnu-gnu
