@@ -9,6 +9,7 @@ Source0:	http://mac.wms-network.de/gnustep/viewit/%{name}-%{version}.tar.gz
 URL:		http://mac.wms-network.de/gnustep/viewit/viewit.html
 BuildRequires:	gnustep-gui-devel >= 0.8.7
 Requires:	gnustep-gui >= 0.8.7
+Requires:	ghotscript
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %define		libcombo	gnu-gnu-gnu
@@ -45,7 +46,7 @@ rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
-%doc ChangeLog README
+%doc README
 %dir %{appdir}
 %attr(755,root,root) %{appdir}/%{name}
 %dir %{appdir}/Resources
