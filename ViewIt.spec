@@ -19,8 +19,7 @@ BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 # also s/alpha.*/alpha/, but we use only "alpha" arch for now
 %define		gscpu		%{_target_cpu}
 %endif
-%define appdir     %{_libdir}/GNUstep/System/Applications/CodeEditor.app
-%define supportdir %{_libdir}/GNUstep/System/Library/ApplicationSupport/CodeEditorView
+%define appdir     %{_libdir}/GNUstep/System/Applications/%{name}.app
 
 %description
 ViewIt, is a simple file previewer application for GNUstep.
@@ -36,7 +35,7 @@ ViewIt, is a simple file previewer application for GNUstep.
 
 %install
 rm -rf $RPM_BUILD_ROOT
-. %{_prefix}/System/Library/Makefiles/GNUstep.sh
+. %{_libdir}/GNUstep/System/Library/Makefiles/GNUstep.sh
 
 %{__make} install \
 	GNUSTEP_INSTALLATION_DIR=$RPM_BUILD_ROOT%{_libdir}/GNUstep/System
@@ -49,15 +48,15 @@ rm -rf $RPM_BUILD_ROOT
 %doc ChangeLog README
 %dir %{appdir}
 %attr(755,root,root) %{appdir}/%{name}
-%dir %{_prefix}/System/Applications/ImageViewer.app/Resources
 %dir %{appdir}/Resources
 %{appdir}/Resources/*.desktop
 %{appdir}/Resources/*.plist
 %{appdir}/Resources/*.tiff
 %{appdir}/Resources/*.gorm
-%{appdir}/Resources/Scripts
+#%{appdir}/Resources/Scripts
 %dir %{appdir}/%{gscpu}
 %dir %{appdir}/%{gscpu}/%{gsos}
 %dir %{appdir}/%{gscpu}/%{gsos}/%{libcombo}
 %attr(755,root,root) %{appdir}/%{gscpu}/%{gsos}/%{libcombo}/%{name}
 %{appdir}/%{gscpu}/%{gsos}/%{libcombo}/*.openapp
+%attr(755,root,root) %{_libdir}/GNUstep/System/Library/Libraries/%{gscpu}/%{gsos}/%{libcombo}/*
