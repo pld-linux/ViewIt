@@ -5,6 +5,7 @@ Release:	1
 License:	GPL
 Group:		X11/Applications/Graphics
 Source0:	http://mac.wms-network.de/gnustep/viewit/%{name}-%{version}.tar.gz
+# Source0-md5:	217309a8f51a804b18200da03a0f892d
 URL:		http://mac.wms-network.de/gnustep/viewit/viewit.html
 BuildRequires:	gnustep-gui-devel >= 0.8.7
 Requires:	gnustep-gui >= 0.8.7
