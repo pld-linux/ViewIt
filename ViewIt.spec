@@ -1,5 +1,5 @@
 Summary:	Previewer for GNUstep
-Summary(pl):	Program do podgl±dania plików dla GNUstepa
+Summary(pl.UTF-8):   Program do podglÄ…dania plikÃ³w dla GNUstepa
 Name:		ViewIt
 Version:	0.5
 Release:	1
@@ -26,8 +26,8 @@ BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 %description
 ViewIt is a simple file previewer application for GNUstep.
 
-%description -l pl
-ViewIt jest prost± aplikacj± do podgl±dania plików przeznaczon± dla
+%description -l pl.UTF-8
+ViewIt jest prostÄ… aplikacjÄ… do podglÄ…dania plikÃ³w przeznaczonÄ… dla
 GNUstepa.
 
 %prep
