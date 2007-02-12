@@ -1,5 +1,5 @@
 Summary:	Previewer for GNUstep
-Summary(pl.UTF-8):   Program do podglądania plików dla GNUstepa
+Summary(pl.UTF-8):	Program do podglądania plików dla GNUstepa
 Name:		ViewIt
 Version:	0.5
 Release:	1
